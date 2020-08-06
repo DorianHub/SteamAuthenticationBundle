@@ -1,12 +1,12 @@
 {
-  "name": "doriantm/steam-authentication-bundle",
+  "name": "doriantm/steam-authentication-bundle-custome",
   "license": "MIT",
   "type": "symfony-bundle",
   "description": "Symfony Bundle to integrate Steam authentication",
   "authors": [
     {
-      "name": "Knojector",
-      "email": "dev@knojector.xyz"
+      "name": "DorianTM",
+      "email": "a@a.a"
     }
   ],
   "autoload": {
