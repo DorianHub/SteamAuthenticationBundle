@@ -355,10 +355,10 @@ abstract class AbstractSteamUser implements SteamUserInterface, UserInterface
         $this->setProfileState($userData['profilestate']);
         $this->setProfileName($userData['personaname']);
         if (array_key_exists('lastlogoff', $userData)) {
-            $user->setLastLogOff($userData['lastlogoff']);
+            $this->setLastLogOff($userData['lastlogoff']);
         }else{
             $nowDate = new \DateTime();
-            $user->setLastLogOff("1596758400");
+            $this->setLastLogOff("1596758400");
         }
         $this->setCommentPermission(
             isset($userData['commentpermission']) ? $userData['commentpermission'] : 0
