@@ -41,7 +41,12 @@ class UserFactory
         $user->setCommunityVisibilityState($userData['communityvisibilitystate']);
         $user->setProfileState($userData['profilestate']);
         $user->setProfileName($userData['personaname']);
-        $user->setLastLogOff($userData['lastlogoff']);
+        if (array_key_exists('lastlogoff', $userData)) {
+            $user->setLastLogOff($userData['lastlogoff']);
+        }else{
+            $nowDate = new \DateTime();
+            $user->setLastLogOff("1596758400");
+        }
         $user->setCommentPermission(
             isset($userData['commentpermission']) ? $userData['commentpermission'] : 0
         );
